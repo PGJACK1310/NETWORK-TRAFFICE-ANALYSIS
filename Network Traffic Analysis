@@ -1,0 +1,23 @@
+Network Traffic Analysis: The Process
+Network Traffic Analysis (NTA) is the process of monitoring, capturing, and examining data packets moving across a network to understand activity, detect threats, troubleshoot issues, and optimize performance.
+The Core Process
+1. Traffic Capture
+The first step is collecting network data. This happens through network taps, port mirroring (SPAN ports), or software agents that copy packets flowing through network devices. Tools like Wireshark, tcpdump, or commercial solutions capture this data without disrupting normal traffic flow.
+2. Data Aggregation
+Raw packet data is massive and unwieldy. The system aggregates this into meaningful flows, sessions, or conversations between devices. Instead of analyzing millions of individual packets, you work with summarized connection records showing who talked to whom, when, and how much data transferred.
+3. Normalization and Enrichment
+The captured data gets standardized into a consistent format and enriched with contextual information like geolocation, threat intelligence feeds, asset information, and user identities. This makes patterns easier to spot.
+4. Analysis and Pattern Recognition
+This is where the real work happens. The system or analyst looks for:
+
+Anomalies in traffic patterns (unusual spikes, strange destinations)
+Known malicious signatures or indicators of compromise
+Protocol violations or malformed packets
+Lateral movement between systems
+Data exfiltration attempts
+
+Modern NTA uses both signature-based detection (known bad patterns) and behavioral analysis (deviations from normal).
+5. Correlation and Contextualization
+Individual suspicious events are correlated with other security data (logs, alerts, vulnerability scans) to build a complete picture. A single DNS query to a weird domain might mean nothing, but combined with subsequent encrypted traffic to an unknown IP, it becomes significant.
+6. Alerting and Response
+When genuine threats or issues are identified, alerts trigger for security teams. The richness of the traffic data helps responders understand what happened, how far it spread, and what needs remediation.
